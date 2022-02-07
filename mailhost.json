@@ -1,0 +1,25 @@
+{
+	"name": "mailhost",
+	"plugin_schema": 2,
+	"release": "12.2-RELEASE",
+	"artifact": "https://github.com/MarcusLindemann/TrueNAS-plugin-mailhost.git",
+	"official": "false",
+	"properties": {
+		"boot": on,
+		"dhcp": 1
+	},
+	"pkgs": [
+		"postfix-ldap",
+		"dovecot"
+	],
+	"packagesite": "http://pkg.freebsd.org/${ABI}/quarterly",
+	"fingerprints": {
+		"iocage-plugins": [
+			{
+				"function": "sha256",
+				"fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+			}
+		]
+	},
+	"revision": "0"
+}
